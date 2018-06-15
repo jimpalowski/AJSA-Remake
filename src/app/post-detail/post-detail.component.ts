@@ -26,4 +26,4 @@ export class PostDetailComponent implements OnInit {
     });
     this.postToDisplay = this.postService.getPostById(this.postId);
   }
-}
+};
