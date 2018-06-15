@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-//import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Post } from './post.model';
 
 
 
 @Injectable()
 export class PostService {
- // posts: FirebaseListObservable<any[]>;
- // constructor(private database: AngularFireDatabase) { 
+ posts: FirebaseListObservable<any[]>;
+ constructor(private database: AngularFireDatabase) {
   this.posts = database.list('posts');
 }
 
@@ -28,6 +28,11 @@ updatePost(localUpdatedPost){
   postEntryInFirebase.update({title: localUpdatedPost.title,
                               author: localUpdatedPost.author,
                               description: localUpdatedPost.description});
-              
+
 }
+deletePost(localPostToDelete){
+   var postEntryInFirebase = this.getPostById(localPostToDelete.$key);
+   postEntryInFirebase.remove();
+ }
+
 }

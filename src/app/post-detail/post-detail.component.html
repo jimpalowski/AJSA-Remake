@@ -1,0 +1,6 @@
+<h2>This post has and id number: {{postId}}</h2>
+<div>
+  <h3>{{(postToDisplay | async)?.title}}</h3>
+  <h4>{{(postToDisplay | async)?.author}}</h4>
+  <p>{{(postToDisplay | async)?.description}}</p>
+</div>
