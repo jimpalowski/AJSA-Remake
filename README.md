@@ -1,27 +1,59 @@
-# AngryJoeShow
+# _Angry Joe Show_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+#### By _Jim Palowski 6.15.18_
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+_An application to remake a website angryjoeshow.com to view posts on the board_
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Specifications
 
-## Build
+* _Add a post through the admin page to add messages_
+  * _Example Event: Title: I'm Bored, Author: Jim, Description: Today there is nothing to do._
+  * _Example Output: I'm Bored
+                    by Jim
+                    Today there is nothing to do._
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+* _On a post you are able to edit_
+  * _Example Input: Current Title: Im Bored_
+  * _Example Output: New Title: Im Happy_
 
-## Running unit tests
+* _On a post your are able to delete the whole post_
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Setup/Installation Requirements
 
-## Running end-to-end tests
+* _Retrieve API from the firebase_
+* _Clone this repository_
+* _Install npm_
+* _Create a "api-keys.ts" file and import the API key_
+* _Update API from .env_
+* _run ng serve_
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Known Bugs
+* _Delete functionality does not work at this moment_
+* _Edit functionality works partially_
+
+## Support and contact details
+
+_If You run into any issues or have questions, ideas, concerns or would like to make a contribution to the code, please contact: palowskijim@gmail.com_
+
+## Technologies Used
+
+* _HTML_
+* _CSS_
+* _JavaScript_
+* _Bootstrap_
+* _jQuery_
+* _Atom_
+* _Karma_
+* _Jasmine_
+* _Angular_
+
+### License
+
+_MIT_
+
+Copyright (c) 2018 **_Jim Palowski_**
