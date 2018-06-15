@@ -10,6 +10,7 @@ import { PostService } from '../post.service';
 })
 export class EditPostComponent implements OnInit {
   @Input() selectedPost;
+  
   constructor(private postService: PostService) { }
 
   ngOnInit() {

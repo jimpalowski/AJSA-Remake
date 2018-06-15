@@ -1,3 +1,12 @@
-<p>
-  edit-post works!
-</p>
+<h4>Edit Post</h4>
+<label>New Post Title:</label>
+<input [(ngModel)]="selectedPost.title">
+<br>
+<label>New Post Athor:</label>
+<input [(ngModel)]="selectedPost.author">
+<br>
+<label>New Post Description:</label>
+<input [(ngModel)]="selectedPost.description">
+<button (click)="beginUpdatingPost(selectedPost)">Update</button>
+<hr>
+<button (click)="beginDeletingPost(selectedPost)">Delete</button>

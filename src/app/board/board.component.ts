@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
-
+import { Router } from '@angular/router';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { Post } from '../post.model';
 
 @Component({
   selector: 'app-board',
@@ -9,10 +11,16 @@ import { PostService } from '../post.service';
   providers: [PostService]
 })
 export class BoardComponent implements OnInit {
+  posts: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
+  constructor(private router: Router, private postService: PostService){}
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit(){
+    this.posts = this.postService.getPosts();
   }
 
+  goToDetailPage(clickedPost) {
+    this.router.navigate(['posts', clickedPost.$key]);
+
+  };
 }

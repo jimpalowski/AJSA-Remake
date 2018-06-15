@@ -17,10 +17,14 @@
       </div>
 
       <div>
-        <label>:</label>
+        <label>Description:</label>
         <br>
         <textarea #newDescription></textarea>
       </div>
+
+      <form name="upload">
+        <input type="file" name="file"/>
+      </form>
       <button (click)="submitForm(newTitle.value, newAuthor.value, newDescription.value); newTitle.value=''; newAuthor.value=''; newDescription.value=''">Add</button>
     </div>
   </div>
@@ -28,4 +32,4 @@
 
 <div>
   <app-board></app-board>
-</div>  
+</div>
